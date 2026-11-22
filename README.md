@@ -14,7 +14,7 @@ MAKEFUN_ENV_URL=http://localhost:8080 python3 -P -s main.py
 node cli/makefun.mjs grade-local --kit . --bot /path/to/makefun-tiny-chess-v2 --driver docker
 ```
 
-The environment serves positions via POST /game and accepts UCI moves via POST /move. Search uses a fixed node budget, never a clock. The packed file contains all engine code; it imports no repository files. MIT licensed.
+The environment serves positions via POST /game and accepts UCI moves via POST /move. Search uses a fixed 60,000-node budget per move, never a clock, with bounded evaluation and pawn-structure caches retained between moves. The packed file contains all engine code; it imports no repository files. MIT licensed.
 
 ---
 
